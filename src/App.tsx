@@ -45,7 +45,7 @@ function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-const LOGO_URL = "https://storage.googleapis.com/static.run.app/v1/p/6bcl3nbtzle7yg6obs/image.png";
+const LOGO_URL = "/logo.png";
 
 // --- Types ---
 interface UserData {
