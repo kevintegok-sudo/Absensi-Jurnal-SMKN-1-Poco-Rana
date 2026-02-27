@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-primary: #e11d48;
+  --color-brand-secondary: #4f46e5;
+  --radius-app: 1.5rem;
+}
+
+body {
+  @apply bg-[#F8FAFC] text-slate-900 antialiased;
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl shadow-slate-200/50;
+}
+
+.brand-gradient {
+  background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+}
+
+.brand-gradient-soft {
+  background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full;
+}
+
+.bottom-nav-shadow {
+  box-shadow: 0 -10px 25px -5px rgba(0, 0, 0, 0.05);
+}
