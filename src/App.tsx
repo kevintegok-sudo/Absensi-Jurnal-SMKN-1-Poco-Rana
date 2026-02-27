@@ -45,7 +45,7 @@ function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-const LOGO_URL = "https://ais-pre-n4pe6bcl3nbtzle7yg6obs-208029399157.asia-east1.run.app/api/image-proxy?url=https%3A%2F%2Fstorage.googleapis.com%2Fstatic.run.app%2Fv1%2Fp%2F6bcl3nbtzle7yg6obs%2Fimage.png";
+const LOGO_URL = "https://storage.googleapis.com/static.run.app/v1/p/6bcl3nbtzle7yg6obs/image.png";
 
 // --- Types ---
 interface UserData {
@@ -188,8 +188,16 @@ const Login = ({ onLogin }: { onLogin: (user: UserData) => void }) => {
       >
         <Card className="p-10 border-none shadow-2xl shadow-slate-200/60">
           <div className="flex flex-col items-center mb-10">
-            <div className="w-24 h-24 mb-6 p-4 bg-rose-50 rounded-[2rem] flex items-center justify-center">
-              <img src={LOGO_URL} alt="Logo" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+            <div className="w-24 h-24 mb-6 p-4 bg-rose-50 rounded-[2rem] flex items-center justify-center overflow-hidden">
+              <img 
+                src={LOGO_URL} 
+                alt="Logo" 
+                className="w-full h-full object-contain" 
+                referrerPolicy="no-referrer"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = "https://cdn-icons-png.flaticon.com/512/2991/2991148.png";
+                }}
+              />
             </div>
             <h1 className="text-2xl font-extrabold text-center text-slate-900 tracking-tight">SMKN 1 Poco Ranaka</h1>
             <p className="text-slate-500 font-medium mt-1">Sistem Absensi & Jurnal</p>
@@ -1188,8 +1196,16 @@ export default function App() {
         {/* Sidebar for Desktop */}
         <aside className="hidden md:flex w-72 bg-slate-900 text-white flex-col sticky top-0 h-screen p-6 z-50">
           <div className="flex items-center gap-3 mb-10 px-2">
-            <div className="w-10 h-10 p-2 bg-white rounded-xl flex items-center justify-center">
-              <img src={LOGO_URL} alt="Logo" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+            <div className="w-10 h-10 p-2 bg-white rounded-xl flex items-center justify-center overflow-hidden">
+              <img 
+                src={LOGO_URL} 
+                alt="Logo" 
+                className="w-full h-full object-contain" 
+                referrerPolicy="no-referrer"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = "https://cdn-icons-png.flaticon.com/512/2991/2991148.png";
+                }}
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-extrabold text-white text-sm leading-none">SMKN 1</span>
@@ -1232,8 +1248,16 @@ export default function App() {
         {/* Mobile Header */}
         <nav className="md:hidden sticky top-0 z-40 bg-white/80 backdrop-blur-xl border-b border-slate-100 p-5 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 p-2 bg-rose-50 rounded-xl flex items-center justify-center">
-              <img src={LOGO_URL} alt="Logo" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+            <div className="w-10 h-10 p-2 bg-rose-50 rounded-xl flex items-center justify-center overflow-hidden">
+              <img 
+                src={LOGO_URL} 
+                alt="Logo" 
+                className="w-full h-full object-contain" 
+                referrerPolicy="no-referrer"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = "https://cdn-icons-png.flaticon.com/512/2991/2991148.png";
+                }}
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-extrabold text-slate-900 text-sm leading-none">SMKN 1</span>
