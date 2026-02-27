@@ -1,8 +1,0 @@
-{
-  "name": "Absen dan Jurnal SMKN 1 Poco Ranaka",
-  "description": "Aplikasi absensi dan jurnal harian untuk SMKN 1 Poco Ranaka dengan fitur selfie, geolocation, dan rekap admin.",
-  "requestFramePermissions": [
-    "camera",
-    "geolocation"
-  ]
-}
